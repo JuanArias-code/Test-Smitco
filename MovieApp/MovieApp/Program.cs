@@ -16,17 +16,17 @@ builder.Services.AddSwaggerGen(options =>
     options.SwaggerDoc("v1", new OpenApiInfo
     {
         Version = "v1",
-        Title = "MovieApp API",
-        Description = "An ASP.NET Core Web API for managing the movie data",
+        Title = "API de Peliculas y CRUD",
+        Description = "Prueba Tecnica",
         Contact = new OpenApiContact
         {
-            Name = "Ankit Sharma",
-            Url = new Uri("https://ankitsharmablogs.com/"),
+            Name = "Juan Arias",
+            Url = new Uri("https://github.com/JuanArias-code"),
         },
         License = new OpenApiLicense
         {
             Name = "MIT Licenese",
-            Url = new Uri("https://github.com/AnkitSharma-007/MovieApp/blob/main/LICENSE"),
+            Url = new Uri("https://github.com/JuanArias-code"),
         }
     });
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
