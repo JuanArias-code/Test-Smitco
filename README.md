@@ -37,4 +37,3 @@ Una aplicación web full-stack para la gestión de datos de películas, creada c
 3. Pon tu propia cadena de conexión en el archivo [appsettings.json]
 4. Construye e inicia la aplicación desde Visual Studio
 
-Traducción realizada con la versión gratuita del traductor DeepL.com
