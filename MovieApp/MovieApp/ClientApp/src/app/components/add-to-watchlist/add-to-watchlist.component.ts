@@ -57,15 +57,15 @@ export class AddToWatchlistComponent implements OnChanges, OnDestroy {
       .subscribe({
         next: () => {
           if (this.toggle) {
-            this.snackBarService.showSnackBar('Item added to your Watchlist');
+            this.snackBarService.showSnackBar('Pelicula añadida a tu lista de seguimiento');
           } else {
             this.snackBarService.showSnackBar(
-              'Item removed from your Watchlist'
+              'Pelicula removida de lista de seguimiento'
             );
           }
         },
         error: (error) => {
-          console.error('Error ocurred while setting the Watchlist : ', error);
+          console.error('Se ha producido un error al configurar la lista de seguimiento : ', error);
         },
       });
   }
@@ -82,10 +82,10 @@ export class AddToWatchlistComponent implements OnChanges, OnDestroy {
 
   private setButtonText() {
     if (this.toggle) {
-      this.buttonText = 'Remove from Watchlist';
+      this.buttonText = 'Eliminar';
       this.fontIcon = 'remove_circle';
     } else {
-      this.buttonText = 'Add to Watchlist';
+      this.buttonText = 'Agregar';
       this.fontIcon = 'add_circle';
     }
   }

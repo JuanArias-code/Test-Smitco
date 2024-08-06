@@ -10,7 +10,8 @@ export class CustomFormValidatorService {
       if (!control.value) {
         return null;
       }
-      const regex = new RegExp('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$');
+    //  const regex = new RegExp('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$');
+    const regex = new RegExp('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[!@#?\\]]).{10,}$');
       const validPattern = regex.test(control.value);
       return validPattern ? null : { invalidPassword: true };
     };

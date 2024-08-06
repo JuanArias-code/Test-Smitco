@@ -3,15 +3,15 @@
     <mat-card-header
       class="mat-elevation-z2 custom-card-header justify-content-between"
     >
-      <mat-card-title class="mat-h1"> User Registration </mat-card-title>
+      <mat-card-title class="mat-h1"> Registrar Usuario </mat-card-title>
       <div>
-        <span class="mat-h4">Already Registered? </span>
+        <span class="mat-h4">Ya estas Registrado? </span>
         <button
           mat-raised-button
           class="mat-elevation-z4"
           [routerLink]="['/login']"
         >
-          Login
+          Iniciar Sesion
         </button>
       </div>
     </mat-card-header>
@@ -22,7 +22,7 @@
         novalidate
       >
         <mat-form-field class="w-100 mt-1" appearance="outline">
-          <mat-label>First name</mat-label>
+          <mat-label>Nombre</mat-label>
           <input
             matInput
             placeholder="First name"
@@ -34,12 +34,12 @@
               registrationFormControl.firstName.touched &&
               registrationFormControl.firstName.errors?.['required']
             "
-            >First Name is required</mat-error
+            >Ingrese su nombre</mat-error
           >
         </mat-form-field>
 
         <mat-form-field class="w-100 mt-1" appearance="outline">
-          <mat-label>Last name</mat-label>
+          <mat-label>Apellido</mat-label>
           <input
             matInput
             placeholder="Last Name"
@@ -51,12 +51,12 @@
               registrationFormControl.lastName.touched &&
               registrationFormControl.lastName.errors?.['required']
             "
-            >Last Name is required</mat-error
+            >Ingrese su apellido</mat-error
           >
         </mat-form-field>
 
         <mat-form-field class="w-100 mt-1" appearance="outline">
-          <mat-label>User name</mat-label>
+          <mat-label>Correo Electronico</mat-label>
           <input
             matInput
             placeholder="User Name"
@@ -68,19 +68,19 @@
               registrationFormControl.userName.touched &&
               registrationFormControl.userName.errors?.['required']
             "
-            >User Name is required
+            >Ingrese su correo electronico
           </mat-error>
           <mat-error
             *ngIf="
               registrationFormControl.userName.touched &&
               registrationFormControl.userName.errors?.['userNameNotAvailable']
             "
-            >User Name is not available</mat-error
+            >El correo electronico ya se encuentra registrado, por favor coloque otro</mat-error
           >
         </mat-form-field>
 
         <mat-form-field class="w-100 mt-1" appearance="outline">
-          <mat-label>Password</mat-label>
+          <mat-label>Contraseña</mat-label>
           <input
             matInput
             placeholder="Password"
@@ -96,7 +96,7 @@
               registrationFormControl.password.touched &&
               registrationFormControl.password.errors?.['required']
             "
-            >Password is required
+            >Ingrese su contraseña
           </mat-error>
           <mat-error
             *ngIf="
@@ -104,13 +104,12 @@
               registrationFormControl.password.errors?.['invalidPassword']
             "
           >
-            Password should have minimum 8 characters, at least 1 uppercase
-            letter, 1 lowercase letter and 1 number
+          La contraseña debe tener al menos 10 caracteres, al menos 1 letra mayúscula, 1 letra minúscula y uno de los siguientes caracteres: !, &#64;, #, ?, o.
           </mat-error>
         </mat-form-field>
 
         <mat-form-field class="w-100 mt-1" appearance="outline">
-          <mat-label>Confirm Password</mat-label>
+          <mat-label>Confirmar Contraseña</mat-label>
           <input
             matInput
             placeholder="Confirm Password"
@@ -130,7 +129,7 @@
               registrationFormControl.confirmPassword.touched &&
               registrationFormControl.confirmPassword.errors?.['required']
             "
-            >Password is required
+            >Ingrese su contraseña
           </mat-error>
           <mat-error
             *ngIf="
@@ -138,24 +137,24 @@
               registrationFormControl.confirmPassword.errors?.['passwordMismatch']
             "
           >
-            Passwords do not match
+          Las contraseñas no coinciden
           </mat-error>
         </mat-form-field>
 
-        <mat-label>Gender:</mat-label>
+        <mat-label>Genero:</mat-label>
         <mat-radio-group formControlName="gender">
-          <mat-radio-button value="Male"> Male </mat-radio-button>
-          <mat-radio-button value="Female"> Female </mat-radio-button>
+          <mat-radio-button value="Male"> Masculino </mat-radio-button>
+          <mat-radio-button value="Female"> Femenino </mat-radio-button>
         </mat-radio-group>
         <mat-error
           *ngIf="
             registrationFormControl.gender.touched &&
             registrationFormControl.gender.errors?.['required']
           "
-          >Gender is required</mat-error
+          >Ingrese su genero</mat-error
         >
         <mat-card-actions align="end">
-          <button mat-raised-button color="primary">Register</button>
+          <button mat-raised-button color="primary">Registrarse</button>
         </mat-card-actions>
       </form>
     </mat-card-content>
