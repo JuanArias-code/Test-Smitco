@@ -64,7 +64,7 @@ namespace MovieApp.Controllers
                 issuer: _config["Jwt:Issuer"],
                 audience: _config["Jwt:Audience"],
                 claims: userClaims,
-                expires: DateTime.Now.AddHours(24),
+                expires: DateTime.Now.AddMinutes(20),
                 signingCredentials: credentials
             );
 
