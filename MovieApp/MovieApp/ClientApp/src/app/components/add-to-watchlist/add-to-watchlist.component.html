@@ -1,0 +1,9 @@
+<button
+  class="w-100"
+  [ngClass]="{ watchlisted: toggle, 'not-watchlisted': !toggle }"
+  mat-raised-button
+  (click)="toggleValue()"
+>
+  <mat-icon fontIcon="{{ fontIcon }}"></mat-icon>
+  {{ buttonText }}
+</button>

@@ -1,0 +1,31 @@
+.spacer {
+  flex-grow: 1;
+}
+
+a:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.brand-title {
+  button {
+    font-size: 18px;
+  }
+}
+
+mat-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+mat-toolbar-row {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.swagger-icon {
+  height: 22px;
+  width: 22px;
+}
