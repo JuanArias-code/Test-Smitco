@@ -40,7 +40,7 @@
           [routerLink]="['/admin/movies']"
           matTooltip="Admin panel"
         >
-          Admin Panel
+          Panel de Administracion
         </a>
         <ng-container *ngIf="userData.isLoggedIn">
           <a mat-flat-button color="primary" [matMenuTriggerFor]="menu">
@@ -48,7 +48,7 @@
             <span> {{ userData.username }}</span>
           </a>
           <mat-menu #menu="matMenu" xPosition="before">
-            <button mat-menu-item (click)="logout()">Logout</button>
+            <button mat-menu-item (click)="logout()">Cerrar Sesion</button>
           </mat-menu>
         </ng-container>
       </ng-container>
@@ -65,16 +65,9 @@
             class="swagger-icon"
             src="https://static1.smartbear.co/swagger/media/assets/swagger_fav.png"
         /></span>
-        Swagger
+        Probar API en Swagger
       </a>
-      <a
-        mat-flat-button
-        color="primary"
-        href="https://github.com/AnkitSharma-007/MovieApp"
-        target="_blank"
-        matTooltip="GitHub link"
-        ><i class="fa-brands fa-github"></i> GitHub</a
-      >
+
     </div>
   </mat-toolbar-row>
 </mat-toolbar>

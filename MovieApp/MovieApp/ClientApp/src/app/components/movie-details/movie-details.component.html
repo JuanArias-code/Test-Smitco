@@ -1,7 +1,7 @@
 <ng-container *ngIf="movieDetails$ | async as movie; else noMovieFound">
   <mat-card class="mt-4">
     <mat-card-header class="mat-elevation-z2 custom-card-header">
-      <mat-card-title class="mat-h1">Movie Details</mat-card-title>
+      <mat-card-title class="mat-h1">Detalles de la Pelicula</mat-card-title>
     </mat-card-header>
     <mat-card-content class="row g-0 d-flex p-3">
       <div class="col-md-3 col-sm-12">
@@ -29,10 +29,10 @@
         </div>
         <p class="my-4">{{ movie.overview }}</p>
         <div class="d-flex justify-content-between">
-          <span><strong>Language</strong> : {{ movie.language }}</span>
-          <span><strong>Genre</strong> : {{ movie.genre }}</span>
+          <span><strong>Idioma</strong> : {{ movie.language }}</span>
+          <span><strong>Genero</strong> : {{ movie.genre }}</span>
           <span
-            ><strong>Duration</strong> :
+            ><strong>Duracion</strong> :
             {{ movie.duration | convertMinToHour }}</span
           >
         </div>
@@ -46,11 +46,11 @@
 <ng-template #noMovieFound>
   <div class="d-flex flex-column align-items-center mt-4">
     <div>
-      <h1 class="display-4">No movies found.</h1>
+      <h1 class="display-4">No se encontro la pelicula.</h1>
     </div>
     <div>
       <button mat-raised-button color="primary" [routerLink]="['/']">
-        Back to Home
+        Regresar a pantalla de inicio
       </button>
     </div>
   </div>
